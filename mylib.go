@@ -32,9 +32,9 @@ func GetActivity(user *string) (*[]Activity, error) {
 	url := fmt.Sprintf("https://api.github.com/users/%s/events", *user)
 	req, err := http.Get(url)
 
-    if req.StatusCode == http.StatusNotFound {
-        log.Fatalf("User %s not found", *user)
-    }
+	if req.StatusCode == http.StatusNotFound {
+		log.Fatalf("User %s not found", *user)
+	}
 
 	if err != nil {
 		return &[]Activity{}, err
@@ -82,9 +82,9 @@ func DisplayActivity(a *[]Activity) {
 
 		default:
 			reg, err := regexp.Compile(`p*Event`)
-            if err != nil {
-                fmt.Println(err)
-            }
+			if err != nil {
+				fmt.Println(err)
+			}
 			fmt.Printf("%s in %s\n", reg.ReplaceAllString(act.Type, ""), act.Repo.Name)
 		}
 	}

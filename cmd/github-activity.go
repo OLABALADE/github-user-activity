@@ -12,9 +12,9 @@ func main() {
 
 	activity, err := mylib.GetActivity(user)
 
-    if err != nil {
-        log.Fatal(err)
-    }
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	mylib.DisplayActivity(activity)
 }
