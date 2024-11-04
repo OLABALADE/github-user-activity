@@ -9,10 +9,10 @@ cd github-user-activity
 ```
 Build the program with this command:
 ```bash
-go build cmd/github-user-activity
+go build cmd/github-activity
 ```
 Run the program with the user name:
 ```bash
-#./github-user-activity --user <username>
-./github-user-activity --user OLABALADE
+#./github-activity --user <username>
+./github-activity --user OLABALADE
 ```
